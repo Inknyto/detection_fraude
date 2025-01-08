@@ -1,5 +1,5 @@
-#  ~/Documents/esmt/test_logiciel/evaluation_formative_1/integration_gitlab_ci/.gitlab-ci.yml :08 Jan at 06:42:02 PM
-image: python:3.9
+#  ~/Documents/esmt/test_logiciel/evaluation_formative_1/integration_gitlab_ci/.gitlab-ci.yml :08 Jan at 06:45:40 PM
+image: python:3.13
 
 variables:
   PIP_CACHE_DIR: '$CI_PROJECT_DIR/.pip-cache'
