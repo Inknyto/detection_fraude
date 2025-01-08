@@ -1,0 +1,8 @@
+#  ~/Documents/esmt/test_logiciel/evaluation_formative_1/integration_gitlab_ci/requirements.txt :08 Jan at 05:27:35 PM
+pandas
+numpy
+scikit-learn
+imbalanced-learn
+pytest
+matplotlib
+gdown

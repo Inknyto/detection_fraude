@@ -1,0 +1,32 @@
+#  ~/Documents/esmt/test_logiciel/evaluation_formative_1/integration_gitlab_ci/.gitlab-ci.yml :08 Jan at 06:42:02 PM
+image: python:3.9
+
+variables:
+  PIP_CACHE_DIR: '$CI_PROJECT_DIR/.pip-cache'
+
+cache:
+  paths:
+    - .pip-cache/
+    - venv/
+
+before_script:
+  - python -V
+  - python -m venv venv
+  - source venv/bin/activate
+  - pip install -r requirements.txt
+  - pip install gdown
+  - gdown https://drive.google.com/uc?id=1ak8-oH0YVpk1ZMl_grndA4dI8NodmS9P -O creditcard.csv
+
+stages:
+  - test
+
+test_fraud_detection:
+  stage: test
+  script:
+    - python -m pytest test_detection_fraude.py -v --junitxml=report.xml
+  artifacts:
+    when: always
+    reports:
+      junit: report.xml
+  only:
+    - main
