@@ -56,7 +56,7 @@ Exemple d'en-tête :
 
 1.  Clonez le dépôt :
     ```bash
-    git clone <votre-repo-url>
+    git clone https://github.com/Inknyto/detection_fraude
     cd detection_fraude
     ```
 
